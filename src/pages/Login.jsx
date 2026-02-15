@@ -24,7 +24,7 @@ const Login = () => {
           Login
         </h2>
         <div
-          className={`flex items-center my-5 border bg-indigo-500/5 border-gray-500/10 rounded gap-1 pl-2 ${formik.touched.email && formik.errors.email ? "invalid: border-red-500" : ""} `}
+          className={`flex items-center mt-5 border bg-indigo-500/5 border-gray-500/10 rounded gap-1 pl-2 ${formik.touched.email && formik.errors.email ? "invalid: border-red-500" : ""} `}
         >
           <svg
             width="18"
@@ -63,7 +63,7 @@ const Login = () => {
         )}
 
         <div
-          className={`flex items-center mt-5 mb-4 border bg-indigo-500/5 border-gray-500/10 rounded gap-1 pl-2 ${formik.touched.password && formik.errors.password ? "invalid: border-red-500" : ""}`}
+          className={`flex items-center mt-5  border bg-indigo-500/5 border-gray-500/10 rounded gap-1 pl-2 ${formik.touched.password && formik.errors.password ? "invalid: border-red-500" : "mb-5"}`}
         >
           <svg
             width="13"
@@ -87,7 +87,7 @@ const Login = () => {
           />
         </div>
         {formik.touched.email && formik.errors.password && (
-          <p className="text-red-500">{formik.errors.password}</p>
+          <p className="text-red-500 mb-5">{formik.errors.password}</p>
         )}
         <div className="flex items-center flex-wrap justify-between mb-6">
           <div className="flex items-center gap-1">
